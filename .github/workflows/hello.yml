@@ -12,22 +12,16 @@ jobs:
 
 
 
-        name: Print My Name
+name:  Name 
 
-        on:
-        workflow_dispatch:
+on:
+  push:
+    branches:
+      - main
 
-        jobs:
-          say-my-name:
-          runs-on: ubuntu-latest
-
-          steps:
-            - name: Say Hello
-              run: echo "Hello, my name is Josephine"
-
-
-
-
-
-
-
+jobs:
+  print-name-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Name
+        run: echo "My name is, kulabako!"
