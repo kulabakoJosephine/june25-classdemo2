@@ -10,14 +10,24 @@ jobs:
 
 
 
+
+
         name: Print My Name
-        on: 
 
-        jobs:
-          say-my-name:
-             runs-on: ubuntu-latest   
+on:
+  workflow_dispatch:
 
-             steps:
-              - name: Say Hello
-                run: echo "Hello, my name is Josephine"
+jobs:
+  say-my-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, my name is Josephine"
+
+
+
+
+
+
 
