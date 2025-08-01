@@ -22,13 +22,13 @@ jobs:
       - name: Run tests
         id: tests
         run: |
-          pytest
+          python manage.py test
 
       - name: Run pylint 
         if: steps.tests.outcome == 'success' 
         run: |
           pip install pylint
-          pylint greetings 
+          pylint 
 
       
       
